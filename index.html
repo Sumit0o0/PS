@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./resources/css/style.css">
     <link rel="stylesheet" href="./resources/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/27a8507432.js" crossorigin="anonymous"></script>
-    <script src="./resources/javaScript/jquery-3.6.4.min.js"></script>
+    <script src="./resources/js/jquery-3.6.4.min.js"></script>
 
 </head>
 
@@ -66,8 +66,7 @@
                 <!-- HERO PAGES -->
                 <div class="col-md-9 col-12 home sidepage" id="div1">
                     <div>
-                        <h1>Sumit Kumar</h1>
-                        <p>Web Developer</p>
+                        <h1 id="typed-strings">Sumit Kumar</h1>
                     </div>
                 </div>
                 <!-- ABOUT ME SECTION -->
@@ -77,7 +76,7 @@
                     </div>
 
                     <div class="row aboutme-info">
-                        <div class="col-7">
+                        <div class="col-md-7 col-12 order-1 order-md-0">
                             <p>
                                 Proin volutpat mauris ac pellentesque pharetra. Suspendisse congue elit vel odio
                                 suscipit, sit amet tempor nisl imperdiet. Quisque ex justo, faucibus ut mi in,
@@ -86,7 +85,7 @@
                                 consectetur dui.
                             </p>
                         </div>
-                        <div class="col-5 aboutme-detailinfo">
+                        <div class="col-md-5 col-12 aboutme-detailinfo order-0 order-md-1">
                             <ul>
                                 <li><span>Age :</span><span>21</span></li>
                                 <li><span>Residence :</span><span>Delhi,India</span></li>
@@ -135,16 +134,22 @@
                                     <h5>Education</h5>
                                 </div>
                                 <div class="row">
-                                    <div class="col-4">
-                                        <p class="timeline">2008</p>
-                                        <p class="education-name">SOL, Delhi University</p>
+                                    <div class="col-12 col-md-4">
+                                        <p class="timeline">Bachelor of Commerce</p>
+                                        <p class="timeline">SOL, Delhi University</p>
+                                        <p class="timeline">2023</p>
                                     </div>
-                                    <div class="col-8">
-                                        <p class="ecuation-heading">Heading</p>
-                                        <p class="eduaction-body">Lorem ipsum dolor sit amet consectetur adipisicing
-                                            elit. Ut delectus magnam officiis eaque illum deleniti ipsa at fugit ad
-                                            minima?</p>
+                                    <div class="col-12 col-md-4">
+                                        <p class="timeline">12th Commerce from CBSE</p>
+                                        <p class="timeline">DC ARYA SR SEC SCHOOL</p>
+                                        <p class="timeline">2020</p>
                                     </div>
+                                    <div class="col-12 col-md-4">
+                                        <p class="timeline">10th from CBSE</p>
+                                        <p class="timeline">GOVT BOYS SSS NO.1</p>
+                                        <p class="timeline">2018</p>
+                                    </div>
+                                    
                                 </div>
                                 
                             </div>
@@ -339,7 +344,10 @@
                                         <label for="message" class="">message</label>
                                         <span>Message is empty</span>
                                     </div>
-                                    <button type="submit">Send message</button>
+                                    <div class="col-12">
+                                        <button type="submit" style="margin: 20px auto;
+                                        display: flex;">Send message</button>
+                                    </div>
                                 </form>
 
                             </div>
@@ -361,7 +369,7 @@
     <!-- OFF CANVAS MOBILE VIEW -->
 
     <div class="humburger-icon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
-        aria-controls="offcanvasWithBothOptions" onclick="myFunction(this)">
+        aria-controls="offcanvasWithBothOptions" >
         <div>
             <div class="bar1"></div>
             <div class="bar2"></div>
@@ -369,7 +377,7 @@
         </div>
     </div>
 
-    <div class="offcanvas offcanvas-end w-75" data-bs-backdrop="static" tabindex="-1" id="offcanvasWithBothOptions"
+    <div class="offcanvas offcanvas-end w-100" tabindex="-1" id="offcanvasWithBothOptions"
         aria-labelledby="staticBackdropLabel" aria-labelledby="offcanvasWithBothOptionsLabel">
         <div class="offcanvas-body">
             <div class="">
@@ -385,11 +393,11 @@
                     </div>
                     <div class="menu-sm-links">
                         <ul>
-                            <li><a href="#div1" id="home" class="menu-links" target="_self">Home</a></li>
-                            <li><a href="#div2" id="aboutMe"class="menu-links"  target="_self">About Me</a></li>
-                            <li><a href="#div3" id="resume" class="menu-links"  target="_self">Resume</a></li>
-                            <li><a href="#div4" id="portfolio" class="menu-links"  target="_self">Portfolio</a></li>
-                            <li><a href="#div5" id="contact" class="menu-links"  target="_self">Contact</a></li>
+                            <li data-bs-dismiss="offcanvas" aria-label="Close"><a href="#div1"  id="home" class="menu-links" target="_self">Home</a></li>
+                            <li data-bs-dismiss="offcanvas" aria-label="Close"><a href="#div2" id="aboutMe"class="menu-links"  target="_self">About Me</a></li>
+                            <li data-bs-dismiss="offcanvas" aria-label="Close"><a href="#div3" id="resume" class="menu-links"  target="_self">Resume</a></li>
+                            <li data-bs-dismiss="offcanvas" aria-label="Close"><a href="#div4" id="portfolio" class="menu-links"  target="_self">Portfolio</a></li>
+                            <li data-bs-dismiss="offcanvas" aria-label="Close"><a href="#div5" id="contact" class="menu-links"  target="_self">Contact</a></li>
                         </ul>
                     </div>
                     <div class="social-links">
@@ -407,7 +415,7 @@
         </div>
     </div>
 
-
+    <script src="./resources/js/typed.min.js"></script>
     <script src="./resources/js/bootstrap.min.js"></script>
     <script src="./resources/js/index.js"></script>
 </body>

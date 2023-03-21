@@ -324,8 +324,22 @@ h1 {
   transform: translate(0, -9px) rotate(45deg);
 }
 
+.offcanvas{
+  background-color: transparent !important;
+}
+
 .offcanvas-body {
-  background-color: var(--secondary-color);
+  background-color:rgba(13, 171, 206, 0.4);
+}
+
+
+.offcanvas-body .profile-img{
+  margin-top: 60px;
+}
+
+.offcanvas-body .profile-img-circle{
+  height: 150px;
+  width: 150px;
 }
 
 .menu-sm-links ul {
@@ -384,6 +398,7 @@ p {
 }
 
 .aboutme-detailinfo ul {
+  padding-left: 0;
   list-style: none;
 }
 
@@ -684,6 +699,24 @@ p {
   margin: 48px 0;
 }
 
+.timeline{
+  margin: 5px 0;
+}
+
+.timeline:first-child{
+  color: rgb(8, 133, 161);
+  font-weight: 600;
+}
+
+.timeline:last-child{
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.resume-col .col-md-4{
+  box-shadow: 0px 0px 2px #64646421
+}
+
 .resume-col:first-child{
   padding-top: 48px;
 }
@@ -732,6 +765,10 @@ p {
   font-size: 10px;
   font-weight: 500;
 }
+
+
+
+
 /************************************************************/
 
 @media screen and (min-width: 768px) {
@@ -787,6 +824,10 @@ p {
   .skill-icons img{
     width: fit-content;
     margin: 0 auto;
+  }
+
+  .timeline{
+    text-align: center;
   }
 
 

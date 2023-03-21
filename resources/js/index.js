@@ -1,6 +1,17 @@
-function myFunction(x) {
-  x.classList.toggle("change");
-}
+$(document).ready(function() {
+
+  $('#offcanvasWithBothOptions').on('shown.bs.offcanvas', function () {
+    $('.humburger-icon').addClass('change');
+  });
+  
+  $('#offcanvasWithBothOptions').on('hidden.bs.offcanvas', function () {
+    $('.humburger-icon').removeClass('change');
+  });
+
+});
+
+
+
 
 const homebtn = document.getElementById("home");
 const aboutMebtn = document.getElementById("aboutMe");
@@ -131,26 +142,26 @@ function formvalidation() {
 // $(document).ready(function () {
 
 //   $('#div1').addClass('active');
-  
+
 //   $('#menu-bar a').click(function(){
 //     // console.log('Button Clicked')
-    
+
 //   })
 
 // });
-$(document).ready(function() {
+$(document).ready(function () {
   // show the home div by default
   $("#div1").addClass("active");
 
   // detect when a link is clicked
-  $(".menu-links").click(function() {
+  $(".menu-links").click(function () {
     // get the id of the div to show
     var id = $(this).attr("href");
 
     // hide the currently visible div and show the new one with animation
-    $(".sidepage.active").fadeOut(500, function() {
+    $(".sidepage.active").fadeOut(500, function () {
       $(this).removeClass("active");
-      $(id).fadeIn(500, function() {
+      $(id).fadeIn(500, function () {
         $(this).addClass("active");
       });
     });
@@ -158,7 +169,85 @@ $(document).ready(function() {
     // prevent the link from being followed
     return false;
   });
+
+  //TYPING EFECT
+  var typed = new Typed("#typed-strings", {
+    /**
+     * @property {array} strings strings to be typed
+     * @property {string} stringsElement ID of element containing string children
+     */
+    strings: ["Sumit Kumar", "Web Developer", "Sumit Kumar", "Web Developer"],
+    stringsElement: null,
+
+    /**
+     * @property {number} typeSpeed type speed in milliseconds
+     */
+    typeSpeed: 100,
+
+    /**
+     * @property {number} startDelay time before typing starts in milliseconds
+     */
+    startDelay: 0,
+
+    /**
+     * @property {number} backSpeed backspacing speed in milliseconds
+     */
+    backSpeed: 100,
+
+    /**
+     * @property {boolean} smartBackspace only backspace what doesn't match the previous string
+     */
+    smartBackspace: false,
+
+    /**
+     * @property {boolean} shuffle shuffle the strings
+     */
+    shuffle: false,
+
+    /**
+     * @property {number} backDelay time before backspacing in milliseconds
+     */
+    backDelay: 700,
+
+    /**
+     * @property {boolean} fadeOut Fade out instead of backspace
+     * @property {string} fadeOutClass css class for fade animation
+     * @property {boolean} fadeOutDelay Fade out delay in milliseconds
+     */
+    fadeOut: false,
+    fadeOutClass: "typed-fade-out",
+    fadeOutDelay: 500,
+
+    /**
+     * @property {boolean} loop loop strings
+     * @property {number} loopCount amount of loops
+     */
+    loop: true,
+    loopCount: Infinity,
+
+    /**
+     * @property {boolean} showCursor show cursor
+     * @property {string} cursorChar character for cursor
+     * @property {boolean} autoInsertCss insert CSS for cursor and fadeOut into HTML <head>
+     */
+    showCursor: false,
+    cursorChar: "|",
+    autoInsertCss: true,
+
+    /**
+     * @property {string} attr attribute for typing
+     * Ex: input placeholder, value, or just HTML text
+     */
+    attr: null,
+
+    /**
+     * @property {boolean} bindInputFocusEvents bind to focus and blur if el is text input
+     */
+    bindInputFocusEvents: false,
+
+    /**
+     * @property {string} contentType 'html' or 'null' for plaintext
+     */
+    contentType: "html",
+  });
 });
-
-
-
