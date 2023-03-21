@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hey I'm Sumit</title>
+    <link rel="shortcut icon" href="./resources/images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./resources/css/style.css">
+    <link rel="stylesheet" href="./resources/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/27a8507432.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="row" id="hero-section">
+        <!-- MENU SECTION -->
+        <div class="col-md-1 d-none d-md-block" id="menu-bar">
+            <ul>
+                <li><a href="" id="home"><span><img src="./resources/images/home.png"></span>Home</a></li>
+                <li><a href="" id="aboutMe"><span><img src="./resources/images/user.png"></span>About Me</a></li>
+                <li><a href="" id="resume"><span><img src="./resources/images/resume.png"></span>Resume</a></li>
+                <li><a href="" id="resume"><span><img src="./resources/images/suitcase.png"></span>Portfolio</a></li>
+                <li><a href="" id="contactME"><span><img src="./resources/images/contact.png"></span>Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-12" id="hero-info">
+            <div class="row">
+                <!-- HERO MY INFO STAIC SECTION -->
+                <div class="col-md-3 profile-sec d-none d-md-block">
+                    <div>
+                        <div class="profile-img">
+                            <div class="profile-img-circle">
+                                <img src="./resources/images/avatar.png" alt="">
+                            </div>
+                        </div>
+                        <div class="profile-text">
+                            <h1>Sumit Kumar</h1>
+                            <p>Web Developer</p>
+                        </div>
+                        <div class="social-links">
+                            <ul>
+                                <li><a href="#"><i class="fa-brands fa-linkedin fa-xl"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-square-github fa-xl"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-square-instagram fa-xl"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="cv-download-btn">
+                            <button>Download CV</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Sec -->
+                <div class="col-md-9 col-12 sidepage">
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- OFF CANVAS MOBILE VIEW -->
+
+    <div class="humburger-icon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
+        aria-controls="offcanvasWithBothOptions" onclick="myFunction(this)">
+        <div>
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-end w-75" data-bs-backdrop="static" tabindex="-1" id="offcanvasWithBothOptions"
+        aria-labelledby="staticBackdropLabel" aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-body">
+            <div class="">
+                <div>
+                    <div class="profile-img">
+                        <div class="profile-img-circle">
+                            <img src="./resources/images/avatar.png" alt="">
+                        </div>
+                    </div>
+                    <div class="profile-text">
+                        <h1>Sumit Kumar</h1>
+                        <p>Web Developer</p>
+                    </div>
+                    <div class="menu-sm-links">
+                        <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="#">About Me</a></li>
+                            <li><a href="#">Resume</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="social-links">
+                        <ul>
+                            <li><a href="#"><i class="fa-brands fa-linkedin fa-xl"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-square-github fa-xl"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-square-instagram fa-xl"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="cv-download-btn">
+                        <button>Download CV</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./resources/js/bootstrap.min.js"></script>
+    <script src="./resources/js/index.js"></script>
+</body>
+
+</html>
