@@ -78,6 +78,7 @@ h6 {
 }
 
 #hero-section {
+  height: 100vh;
   margin: 0;
   font-family: "Poppins", sans-serif;
   /* caret-color: transparent; */
@@ -287,8 +288,8 @@ h1 {
 .humburger-icon {
   cursor: pointer;
   position: fixed;
-  top: 18px;
-  right: 18px;
+  top: 5px;
+  right: 5px;
   padding: 10px 12px;
   z-index: 10000;
   caret-color: transparent;
@@ -828,6 +829,25 @@ p {
 
   .timeline{
     text-align: center;
+  }
+
+  .cv-download-btn button{
+    border-radius: 0px;
+   width: 100%;
+   box-shadow: 0px 4px 14px rgba(1, 79, 97, 0.441);
+  }
+
+  .menu-sm-links li{
+    margin: 20px 0;
+    box-shadow: 0px 0px 2px #ffffff;
+    font-weight: 600;
+  }
+
+  .menu-sm-links li:hover{
+    background-color: #fff;
+  }
+  .menu-sm-links li:hover a{
+    color: rgba(13, 171, 206);
   }
 
 

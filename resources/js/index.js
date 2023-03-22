@@ -207,7 +207,7 @@ $(document).ready(function () {
     /**
      * @property {number} backDelay time before backspacing in milliseconds
      */
-    backDelay: 700,
+    backDelay: 400,
 
     /**
      * @property {boolean} fadeOut Fade out instead of backspace
