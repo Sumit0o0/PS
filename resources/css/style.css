@@ -78,7 +78,7 @@ h6 {
 }
 
 #hero-section {
-  height: 100vh;
+  /* height: 100vh; */
   margin: 0;
   font-family: "Poppins", sans-serif;
   /* caret-color: transparent; */
@@ -246,7 +246,7 @@ h1 {
 /**/
 
 .sidepage {
-  display: none ;
+  display: none;
   background-color: #fff;
   height: 100vh;
   width: 100%;
@@ -256,7 +256,6 @@ h1 {
 .sidepage.active {
   display: block;
 }
-
 
 .home {
   position: relative;
@@ -325,20 +324,19 @@ h1 {
   transform: translate(0, -9px) rotate(45deg);
 }
 
-.offcanvas{
+.offcanvas {
   background-color: transparent !important;
 }
 
 .offcanvas-body {
-  background-color:rgba(13, 171, 206, 0.4);
+  background-color: rgba(13, 171, 206, 0.4);
 }
 
-
-.offcanvas-body .profile-img{
+.offcanvas-body .profile-img {
   margin-top: 60px;
 }
 
-.offcanvas-body .profile-img-circle{
+.offcanvas-body .profile-img-circle {
   height: 150px;
   width: 150px;
 }
@@ -347,17 +345,29 @@ h1 {
   list-style: none;
   padding: 0;
 }
+
 .menu-sm-links li {
   text-align: center;
   padding: 5px 0;
-  margin: 12px 0;
+  margin: 20px 0;
   font-size: 18px;
+  font-weight: 600;
+  box-shadow: 0px 0px 4px #ffffff6f;
 }
 
 .menu-sm-links a {
   text-decoration: none;
   color: #d9f4fc;
 }
+
+.menu-sm-links li:hover {
+  background-color: #fff;
+}
+.menu-sm-links li:hover a {
+  color: rgba(13, 171, 206);
+}
+
+
 
 .offcanvas-body .profile-text {
   color: #fff;
@@ -696,33 +706,33 @@ p {
   margin: 0 auto;
 }
 
-.resume-col{
+.resume-col {
   margin: 48px 0;
 }
 
-.timeline{
+.timeline {
   margin: 5px 0;
 }
 
-.timeline:first-child{
+.timeline:first-child {
   color: rgb(8, 133, 161);
   font-weight: 600;
 }
 
-.timeline:last-child{
+.timeline:last-child {
   font-size: 12px;
   font-weight: 600;
 }
 
-.resume-col .col-md-4{
-  box-shadow: 0px 0px 2px #64646421
+.resume-col .col-md-4 {
+  box-shadow: 0px 0px 2px #64646421;
 }
 
-.resume-col:first-child{
+.resume-col:first-child {
   padding-top: 48px;
 }
 
-.certificates{
+.certificates {
   display: flex;
   padding-left: 0 !important;
   margin: 42px auto;
@@ -732,43 +742,39 @@ p {
   box-shadow: 0px 0px 4px #00000031;
 }
 
-.resume .heading{
+.resume .heading {
   margin-top: 22px;
 }
 
-.certificates-logo{
+.certificates-logo {
   width: 100%;
   background-color: #f5f5f5;
   border-radius: 7px 0px 0px 8px;
-
 }
 
-.certificates-body{
+.certificates-body {
   width: 68%;
   float: right;
   margin: auto;
 }
 
-.certificates-body p{
+.certificates-body p {
   margin: 8px 0;
 }
 
-.certificates-heading{
+.certificates-heading {
   font-size: 18px;
   font-weight: 600;
 }
 
-.certificates-id{
+.certificates-id {
   font-size: 12px;
 }
 
-.certificates-date{
+.certificates-date {
   font-size: 10px;
   font-weight: 500;
 }
-
-
-
 
 /************************************************************/
 
@@ -822,34 +828,22 @@ p {
     padding: 22px 0;
   }
 
-  .skill-icons img{
+  .skill-icons img {
     width: fit-content;
     margin: 0 auto;
   }
 
-  .timeline{
+  .timeline {
     text-align: center;
   }
 
-  .cv-download-btn button{
+  .cv-download-btn button {
+    display: block;
     border-radius: 0px;
-   width: 100%;
-   box-shadow: 0px 4px 14px rgba(1, 79, 97, 0.441);
+    width: 100%;
+    box-shadow: 0px 4px 14px rgba(1, 79, 97, 0.441);
+    text-align: center;
   }
-
-  .menu-sm-links li{
-    margin: 20px 0;
-    box-shadow: 0px 0px 2px #ffffff;
-    font-weight: 600;
-  }
-
-  .menu-sm-links li:hover{
-    background-color: #fff;
-  }
-  .menu-sm-links li:hover a{
-    color: rgba(13, 171, 206);
-  }
-
 
   .contact .backgroundImg {
     background-image: url(../images/contactus_banner_mobile.png);

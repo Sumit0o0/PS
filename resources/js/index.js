@@ -77,10 +77,7 @@ const subject = document.getElementById("subject");
 const message = document.getElementById("message");
 let errorspan = document.querySelectorAll("#contactform span");
 const formfeedback = document.querySelector(".formfeedback");
-// console.log(formfeedback);
-// console.log(message);
 
-// onsubmit="return formvalidation()"
 contactform.addEventListener("submit", function (event) {
   // your code here
   formvalidation();
@@ -139,22 +136,13 @@ function formvalidation() {
   return true;
 }
 
-// $(document).ready(function () {
-
-//   $('#div1').addClass('active');
-
-//   $('#menu-bar a').click(function(){
-//     // console.log('Button Clicked')
-
-//   })
-
-// });
 $(document).ready(function () {
   // show the home div by default
   $("#div1").addClass("active");
 
   // detect when a link is clicked
   $(".menu-links").click(function () {
+
     // get the id of the div to show
     var id = $(this).attr("href");
 
@@ -170,6 +158,7 @@ $(document).ready(function () {
     return false;
   });
 
+  
   //TYPING EFECT
   var typed = new Typed("#typed-strings", {
     /**
