@@ -79,8 +79,8 @@ h6 {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 180px;
-  scroll-padding-bottom: 180px;
+  scroll-padding-top: 50px;
+  scroll-padding-bottom: 50px;
 }
 
 #hero-section {
@@ -804,6 +804,8 @@ p {
   ::-webkit-scrollbar {
     background-color: rgba(13, 171, 206, 0.441);
     width: 10px;
+    overscroll-behavior-x: contain;
+    overscroll-behavior-y: none;
   }
 
   ::-webkit-scrollbar-thumb {
