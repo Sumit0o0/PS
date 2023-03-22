@@ -77,6 +77,10 @@ h6 {
   --secondary-color-dark: rgb(9, 122, 148);
 }
 
+html {
+  scroll-padding-top: 80px;
+}
+
 #hero-section {
   /* height: 100vh; */
   margin: 0;
