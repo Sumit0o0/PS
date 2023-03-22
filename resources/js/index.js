@@ -17,9 +17,6 @@ const homebtn = document.getElementById("home");
 const aboutMebtn = document.getElementById("aboutMe");
 const resumebtn = document.getElementById("resume");
 const contactMEbtn = document.getElementById("contactME");
-
-// contactMEbtn.addEventListener("click", () => {});
-
 const firstformsec = document.querySelector(".firstformsec");
 let inputs = firstformsec.querySelectorAll("input");
 let labels = firstformsec.querySelectorAll("label");
@@ -158,7 +155,7 @@ $(document).ready(function () {
     return false;
   });
 
-  
+
   //TYPING EFECT
   var typed = new Typed("#typed-strings", {
     /**
