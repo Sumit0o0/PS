@@ -77,14 +77,9 @@ h6 {
   --secondary-color-dark: rgb(9, 122, 148);
 }
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 50px;
-  scroll-padding-bottom: 50px;
-}
 
 #hero-section {
-  /* height: 100vh; */
+  height: 100vh;
   margin: 0;
   font-family: "Poppins", sans-serif;
   /* caret-color: transparent; */
@@ -249,12 +244,10 @@ h1 {
   color: var(--secondary-color);
 }
 
-/**/
 
 .sidepage {
   display: none;
   background-color: #fff;
-  height: 100vh;
   width: 100%;
   overflow-y: scroll;
 }
@@ -264,6 +257,7 @@ h1 {
 }
 
 .home {
+  height: 100vh;
   position: relative;
   padding-right: 40px !important;
   padding-left: 40px !important;
@@ -335,30 +329,27 @@ h1 {
 }
 
 .offcanvas-body {
-  background-color: rgba(13, 171, 206, 0.4);
-}
-
-.offcanvas-body .profile-img {
-  margin-top: 60px;
-}
-
-.offcanvas-body .profile-img-circle {
-  height: 150px;
-  width: 150px;
+  background-color: rgba(255, 255, 255, 0.393);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  opacity: 0.9;
 }
 
 .menu-sm-links ul {
   list-style: none;
   padding: 0;
+  margin: 40px 0;
 }
 
 .menu-sm-links li {
   text-align: center;
   padding: 5px 0;
-  margin: 20px 0;
+  margin: 10px 0;
   font-size: 18px;
   font-weight: 600;
   box-shadow: 0px 0px 4px #ffffff6f;
+  border-radius: 4px;
+  background-color: rgba(1, 79, 97, 0.16);
 }
 
 .menu-sm-links a {
@@ -378,19 +369,6 @@ h1 {
 
 
 
-.offcanvas-body .profile-text {
-  color: #fff;
-}
-
-.offcanvas-body .profile-text h1 {
-  font-size: 2rem;
-  width: 100%;
-}
-
-.offcanvas-body .profile-text h1,
-p {
-  margin-bottom: 0;
-}
 
 /**********************************************/
 
@@ -410,7 +388,7 @@ p {
 }
 
 .aboutme-info {
-  padding: 32px 0;
+  padding: 22px 0;
 }
 
 .aboutme-info p {
@@ -522,6 +500,7 @@ p {
   border-radius: 5px;
   border: 2px solid var(--primary-color);
   box-shadow: 0px 4px 6px 0px #00000009;
+  padding: 12px;
 }
 
 .firstformsec label {
@@ -591,6 +570,12 @@ p {
   color: #fff;
 }
 
+.contactform button.submitaction{
+  transition: 0.2s;
+  background-color: rgba(0, 128, 0, 0.628);
+  color: #fff;
+}
+
 .firstformsec span {
   visibility: hidden;
   font-size: 12px;
@@ -624,20 +609,29 @@ p {
   display: none;
   width: 100%;
   height: 100%;
-  background-color: rgb(255, 255, 255);
   position: absolute;
   bottom: 0;
   right: 0;
+  transform: translateX(100%);
 }
 
 .formfeedback.feedbackvisible {
   display: block;
+  transform: translateX(0%);
+  transition: transform 1s ease-in-out;
 }
 
 .formfeedback h1 {
+  font-size: 1rem;
   position: absolute;
-  top: 40%;
-  transform: translateY(-40%);
+  bottom: 0;
+  right: 0;
+  background-color: #fff;
+  padding: 20px 40px;
+  box-shadow: 0px 0px 4px #0000002f;
+  border-radius: 12px;
+  color: var(--secondary-color);
+  /* transform: translateY(-40%); */
 }
 
 /***********************************************************/
@@ -671,12 +665,6 @@ p {
 .projectsImglink > img {
   width: auto;
   height: 240px;
-}
-
-.projects:hover .projectsImglink > img {
-  transition: 0.4s;
-  transform: scale(1.03);
-  filter: contrast(90%);
 }
 
 .caption {
@@ -726,15 +714,21 @@ p {
 
 .timeline:first-child {
   color: rgb(8, 133, 161);
+  font-size: 17px;
   font-weight: 600;
 }
 
+.timeline:nth-child(2){
+  color: rgb(133, 133, 133);
+}
+
 .timeline:last-child {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
 }
 
 .resume-col .col-md-4 {
+  margin: 4px 0;
   box-shadow: 0px 0px 2px #64646421;
 }
 
@@ -786,6 +780,16 @@ p {
   font-weight: 500;
 }
 
+.aboutme-info p{
+  color: #5d5d5d;
+}
+
+.aboutme-info .aboutmefocus{
+  color: var(--secondary-color);
+}
+
+
+
 /************************************************************/
 
 @media screen and (min-width: 768px) {
@@ -798,6 +802,25 @@ p {
   .skills {
     display: flex;
   }
+  .sidepage{
+    height: 100vh;
+  }
+
+  .projects:hover .projectsImglink > img {
+    transition: 0.4s;
+    transform: scale(1.03);
+    filter: contrast(90%);
+  }
+
+  .formfeedback{
+    bottom: 6px;
+  }
+  
+
+  .aboutme-detailinfo ul {
+    margin: 16px 0;
+  }
+  
 }
 
 @media screen and (min-width: 1090px) {
@@ -836,13 +859,20 @@ p {
     padding: 0;
   }
 
+  .skills{
+    display: flex;
+  }
+
   .skill-icons {
     padding: 22px 0;
+    display: flex;
   }
 
   .skill-icons img {
+    height: 40px;
     width: fit-content;
-    margin: 0 auto;
+    margin: 0;
+    display: flex;
   }
 
   .timeline {
@@ -853,8 +883,17 @@ p {
     display: block;
     border-radius: 0px;
     width: 100%;
-    box-shadow: 0px 4px 14px rgba(1, 79, 97, 0.441);
+    box-shadow: 0px 4px 14px rgba(1, 79, 97, 0.201);
     text-align: center;
+    border-radius: 4px;
+  }
+
+  .backend, .frontend{
+    padding: 20px 0;
+  }
+
+  .aboutme-info p{
+    font-size: 14px;
   }
 
   .contact .backgroundImg {
@@ -865,5 +904,81 @@ p {
     padding: 22px 44px;
     margin: 28px 0;
     border-radius: 4px;
+  }
+
+  .caption{
+    text-align: center;
+  }
+
+  .profile-img{
+    display: flex;
+    background-color: rgba(1, 79, 97, 0.441);
+  }
+
+
+  .offcanvas-body .profile-text {
+    width: 70%;
+    color: #fff;
+    margin: auto 0;
+  }
+  
+  .offcanvas-body .profile-text h1 {
+    font-size: 1.8rem;
+    width: 100%;
+    margin: 0;
+  }
+  
+  .offcanvas-body .profile-text p {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .offcanvas-body .profile-img {
+    margin-top: 60px;
+    background-position: 4px 4px;
+    box-shadow: 0px 0px 12px 4px #ffffff48;
+    border-radius: 6px;
+    padding: 10px 0;
+  }
+  
+  .offcanvas-body .profile-img-circle {
+    height: 80px;
+    width: 24%;
+    margin: 0;
+    border-radius: 100%;
+    margin: auto;
+  }
+
+  .offcanvas-body .profile-img-circle img{
+    height: 80px;
+    margin-top: 10px;
+  }
+
+  .social-links{
+    padding: 10px 0;
+    margin-bottom: 18px;
+    box-shadow: 0px 0px 4px #ffffff6f;
+    background-color: rgba(1, 79, 97, 0.16);
+    border-radius: 4px;
+  }
+
+  .social-links ul{
+   width: 100%;
+    margin: initial;
+    padding-left: initial;
+    justify-content: space-evenly;
+  }
+
+  
+ 
+  
+
+
+  
+
+  .touchscreen.projects:hover .projectsImglink > img {
+    transition: 0.2s;
+    transform: scale(1.03);
+    filter: contrast(90%);
   }
 }

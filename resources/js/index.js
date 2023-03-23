@@ -1,17 +1,45 @@
-$(document).ready(function() {
-
-  $('#offcanvasWithBothOptions').on('shown.bs.offcanvas', function () {
-    $('.humburger-icon').addClass('change');
-  });
-  
-  $('#offcanvasWithBothOptions').on('hidden.bs.offcanvas', function () {
-    $('.humburger-icon').removeClass('change');
+$(document).ready(function () {
+  $("#offcanvasWithBothOptions").on("shown.bs.offcanvas", function () {
+    $(".humburger-icon").addClass("change");
   });
 
+  $("#offcanvasWithBothOptions").on("hidden.bs.offcanvas", function () {
+    $(".humburger-icon").removeClass("change");
+  });
+
+
+  var projects = $(".projects");
+
+  var touchTime = 0;
+  var delay = 200; // set the delay time for double click in milliseconds
+
+  projects.on("click", function (event) {
+    var link = $(this).find("a");
+    if (link.length) {
+      // prevent default link behavior on single-click
+      event.preventDefault();
+      // add hover effect
+      $(this).addClass("touchscreen");
+      // set a timeout to allow for double-click action
+      setTimeout(function () {
+        $(this).removeClass("touchscreen");
+      }, delay);
+    } else {
+      // no child link element - do nothing
+    }
+  });
+
+  projects.on("dblclick", function (event) {
+    event.preventDefault(); // prevent the default behavior of double-clicking (e.g. selecting text)
+    var link = $(this).find("a");
+    if (link.length) {
+      // redirect to project link
+      window.location.href = link.attr("href");
+    } else {
+      // no child link element - do nothing
+    }
+  });
 });
-
-
-
 
 const homebtn = document.getElementById("home");
 const aboutMebtn = document.getElementById("aboutMe");
@@ -63,8 +91,6 @@ function projectmousefun(no) {
   });
 }
 
-/******************************************************************************/
-
 /******************************Contact Form validation*************************/
 
 const contactform = document.getElementById("contactform");
@@ -81,7 +107,11 @@ contactform.addEventListener("submit", function (event) {
   if (formvalidation() == true) {
     setTimeout(() => {
       formfeedback.classList.add("feedbackvisible");
-    }, 1500);
+      setTimeout(()=>{
+        formfeedback.classList.remove("feedbackvisible");
+        contactform.querySelector("button").classList.remove('submitaction');
+      },2000);
+    }, 400);
   } else {
     formfeedback.classList.remove("feedbackvisible");
   }
@@ -128,8 +158,8 @@ function formvalidation() {
     errorspan[3].classList.remove("errdisplay");
   }
 
-  contactform.querySelector("button").style.backgroundColor =
-    "rgba(0, 128, 0, 0.628)";
+  contactform.querySelector("button").classList.add('submitaction');
+    
   return true;
 }
 
@@ -139,7 +169,6 @@ $(document).ready(function () {
 
   // detect when a link is clicked
   $(".menu-links").click(function () {
-
     // get the id of the div to show
     var id = $(this).attr("href");
 
@@ -155,35 +184,34 @@ $(document).ready(function () {
     return false;
   });
 
-
   //TYPING EFECT
   var typed = new Typed("#typed-strings", {
     /**
      * @property {array} strings strings to be typed
      * @property {string} stringsElement ID of element containing string children
      */
-    strings: ["Sumit Kumar", "Web Developer", "Sumit Kumar", "Web Developer"],
+    strings: ["Sumit Kumar", "Web Developer"],
     stringsElement: null,
 
     /**
      * @property {number} typeSpeed type speed in milliseconds
      */
-    typeSpeed: 100,
+    typeSpeed: 50,
 
     /**
      * @property {number} startDelay time before typing starts in milliseconds
      */
-    startDelay: 0,
+    startDelay: 100,
 
     /**
      * @property {number} backSpeed backspacing speed in milliseconds
      */
-    backSpeed: 100,
+    backSpeed: 300,
 
     /**
      * @property {boolean} smartBackspace only backspace what doesn't match the previous string
      */
-    smartBackspace: false,
+    smartBackspace: true,
 
     /**
      * @property {boolean} shuffle shuffle the strings
@@ -193,7 +221,7 @@ $(document).ready(function () {
     /**
      * @property {number} backDelay time before backspacing in milliseconds
      */
-    backDelay: 400,
+    backDelay: 200,
 
     /**
      * @property {boolean} fadeOut Fade out instead of backspace
@@ -202,7 +230,7 @@ $(document).ready(function () {
      */
     fadeOut: false,
     fadeOutClass: "typed-fade-out",
-    fadeOutDelay: 500,
+    fadeOutDelay: 400,
 
     /**
      * @property {boolean} loop loop strings
